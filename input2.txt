@@ -1,0 +1,7 @@
+gjsdghvdgsjhdjghfvjhfvhjfvhfvhvfhgvfhvfhfvhjvf// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();
+Following is the syntax to bind event handler with an event:
+
+// Bind event and even handler as follows
+eventEmitter.on('eventName', eventHandler);
+We can fire an event programatically as follows:
