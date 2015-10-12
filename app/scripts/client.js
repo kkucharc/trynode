@@ -8,7 +8,7 @@ var options = {
 };
 
 // Callback function is used to deal with response
-var callback = function(response){
+let callback = function(response){
    // Continuously update stream with data
    var body = '';
    response.on('data', function(data) {
