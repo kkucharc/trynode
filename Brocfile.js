@@ -12,11 +12,20 @@ var pickFiles = require('broccoli-static-compiler');
 var styles = concat(
 	'app/scss',{
 		inputFiles: ['*.scss'],
-		outputFile: '/assets/style.scss'
+		outputFile: '/brocoli/assets/style.scss'
 	});
 
 // grab my scripts
-var scripts = compileES6('app/scripts');
+var scripts = compileES6('app/scripts', [    
+	'es6-arrow-function',
+  	'es6-class',
+    'es6-destructuring',
+    'es6-object-concise-method',
+    'es6-object-short-notation',
+    'es6-rest-param',
+    'es6-template',
+    'es7-spread-property',
+    'reserved-words']);
 
 // grap any static assets
 var public = pickFiles('app/html', {  
@@ -26,6 +35,4 @@ var public = pickFiles('app/html', {
 
 
 // merge all trees:
-var encoded = compileES6('app/scripts');
-console.log(encoded);
 module.exports = mergeTrees([scripts, styles, public]);  
