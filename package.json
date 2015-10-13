@@ -9,11 +9,9 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^3.2.0",
-    "broccoli": "^0.16.8",
-    "broccoli-concat": "0.0.11",
-    "broccoli-jstransform": "^3.0.0",
-    "broccoli-merge-trees": "^0.1.4",
-    "broccoli-sass": "^0.2.2",
-    "broccoli-static-compiler": "^0.1.4"
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0"
   }
 }
