@@ -6,7 +6,7 @@ var eventHandler = function connect(){
 	console.log("Connection succesful");
 	console.log('INSIDE CONNECTION HANDLER');
 	eventEmitter.emit('data_received');
-}
+};
 
 //Binding
 eventEmitter.on('connection', eventHandler);

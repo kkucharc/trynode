@@ -27,16 +27,16 @@ var req = http.request(options, callback);
 req.end();
 
 // ES6
-class Language3 {
-  constructor(name, founder, year) {
+
+  function Language3(name, founder, year) {
     this.name = name;
     this.founder = founder;
     this.year = year;
   }
-  summary() {
+  Object.defineProperty(Language3.prototype,"summary",{writable:true,configurable:true,value:function() {
     return this.name + " was created by " + this.founder + " in " + this.year;
-  }
-}
+  }});
+
 
 
 // ES5
@@ -44,7 +44,7 @@ var Language2 = function(config) {
   this.name = config.name;
   this.founder = config.founder;
   this.year = config.year;
-};
+}
  
 Language2.prototype.summary = function() {
   return this.name + " was created by " + this.founder + " in " + this.year;

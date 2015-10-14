@@ -52,10 +52,13 @@ console.log("Program Ended");
 console.log( __filename );
 console.log( __dirname );
 
-// oczywiscie to wcyaiagnie plikow jest callbackami wiec pojawi sie zawsze w kolejnce na koncu :/
+// oczywiscie to wcyaiagnie plikow jest 
+// callbackami wiec pojawi sie zawsze w kolejnce na koncu :/
 
-// jakby te callbacki jeszcze wziac w taka funkcje to do tego wszystkiego mozna spowolnic 
-// wszystko, tak aby nie dosc ze bylo ostatnie to jeszcze wywolalo sie po wszystkim :/
+// jakby te callbacki jeszcze wziac w taka funkcje 
+//to do tego wszystkiego mozna spowolnic 
+// wszystko, tak aby nie dosc ze bylo ostatnie to 
+//jeszcze wywolalo sie po wszystkim :/
 function printHello(){
    console.log( "Hello, World!");
 }
@@ -83,7 +86,8 @@ fs.readFile('input.txt', function(err, data){
 });
 console.log("Koniec z timeoutem");
 
-// Ok czyli mozna synchroniczne przlozyc "ZA" asynchronicznymi za pomocą timeoutu
+// Ok czyli mozna synchroniczne 
+// przlozyc "ZA" asynchronicznymi za pomocą timeoutu
 
 //A jakby usunac ten timeout
 
