@@ -9,7 +9,7 @@ var options = {
    path: '/task_managers.html'  
 };
 
-// Callback function is used to deal with response
+// Callback function is used to deal with response asssafdsfdgfhfghfgsgffsgbfsfg
 var callback = function(response){
    // Continuously update stream with data
    var body = '';
@@ -44,7 +44,7 @@ var Language2 = function(config) {
   this.name = config.name;
   this.founder = config.founder;
   this.year = config.year;
-};
+}
  
 Language2.prototype.summary = function() {
   return this.name + " was created by " + this.founder + " in " + this.year;
