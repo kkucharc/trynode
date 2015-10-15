@@ -10,7 +10,7 @@ var options = {
 // Callback function is used to deal with response
 let callback = function(response){
    // Continuously update stream with data
-   var body = '';
+   let body = '';
    response.on('data', function(data) {
       body += data;
    });
@@ -23,3 +23,15 @@ let callback = function(response){
 // Make a request to the server
 var req = http.request(options, callback);
 req.end();
+
+// ES6
+class Language3 {
+  constructor(name, founder, year) {
+    this.name = name;
+    this.founder = founder;
+    this.year = year;
+  }
+  summary() {
+    return this.name + " was created by " + this.founder + " in " + this.year;
+  }
+}

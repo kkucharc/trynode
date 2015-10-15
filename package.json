@@ -13,7 +13,8 @@
     "broccoli-concat": "0.0.11",
     "broccoli-jstransform": "^3.0.0",
     "broccoli-merge-trees": "^0.1.4",
-    "broccoli-sass": "^0.2.2",
+    "broccoli-sass": "^0.6.7",
+    "broccoli-jshint": "^1.1.0",
     "broccoli-static-compiler": "^0.1.4"
   }
 }
