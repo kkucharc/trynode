@@ -7,17 +7,24 @@ module.exports = function(grunt) {
           visitors: ['class', 'arrow-function', 'object-short-notation']
         },
         files: {
-          'dest/scripts/client.js':['app/scripts/client.js'],
-          'dest/scripts/domains.js':['app/scripts/domains.js']
+          'grunt/scripts/client.js':['app/scripts/client.js'],
+          'grunt/scripts/domains.js':['app/scripts/domains.js']
         }
       }
+    },
+    sass: {
+        dist: {
+            files: {
+                'grunt/css/style.css': 'app/scss/style.scss'
+            }
+        }
     },
     concat: {
       dist: {
         // the files to concatenate
-        src: ['src/**/style.scss'],
+        src: ['grunt/scripts/*.js'],
         // the location of the resulting CSS file
-        dest: 'dest/scss/output.scss'
+        dest: 'grunt/app.js'
       }
     },
     jshint: {
@@ -36,11 +43,6 @@ module.exports = function(grunt) {
         files: ['app/scripts/*.js'],
         tasks: ['jstransform']
       }
-      // ,
-      // scriptsJSHint: {
-      //    files: ['app/scripts/*.js', 'dest/scripts/*.js'],
-      //    tasks: ['jshint']
-      // }
     }
   });
 
@@ -48,11 +50,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-sass');
   // Load the plugin that provides the "uglify" task.
 
-  grunt.registerTask('jstransform', function(){
+  grunt.registerTask('transform', function(){
+    grunt.task.run('jstransform');
     grunt.task.run('jshint');
+    grunt.task.run('concat');
+
   });
   // Default task(s).
-  grunt.registerTask('default', ['jstransform', 'concat', 'jshint']);
+  grunt.registerTask('default', ['transform', 'sass', 'watch']);
 };
