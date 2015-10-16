@@ -9,12 +9,12 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^3.2.0",
-    "gulp-jstransform": "~1.0.0",
+    "gulp": "^3.9.0",
     "gulp-concat": "~2.6.0",
     "gulp-jshint": "~1.11.2",
-    "gulp-util": "~3.0.6",
+    "gulp-jstransform": "~1.0.0",
     "gulp-rename": "~1.2.2",
     "gulp-sass": "~2.0.4",
-    "gulp": "^3.9.0"
+    "gulp-util": "~3.0.6"
   }
 }

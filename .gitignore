@@ -2,3 +2,5 @@ node_modules
 tmp
 dist
 npm-debug.log
+gulp
+public
